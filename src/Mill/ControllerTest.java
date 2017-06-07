@@ -59,8 +59,8 @@ public class ControllerTest {
     }
 
     @Test
-    public void testUnselect() throws Exception {
-        int[] status1 = {
+    public void testUnselect() {
+        final int[] status1 = {
                 1,          1,          1,
                     0,      0,      0,
                         0, -1,  0,
@@ -69,7 +69,7 @@ public class ControllerTest {
                     -1,     -1,      0,
                 0,          0,          0
         };
-        int[] status2 = {
+        final int[] status2 = {
                 -1,        -1,          1,
                     -1,     1,      0,
                         0,  0,  0,
@@ -103,17 +103,17 @@ public class ControllerTest {
     }
 
     @Test
-    public void testSelect() throws Exception {
-        int[] status1 = {
+    public void testSelect() {
+        final int[] status1 = {
                 1,          1,          1,
                     0,      0,      0,
                         0, -1,  0,
                 0,  0,  0,     -1,  0,  1,
                         0,  0,  0,
                     -1,     -1,      0,
-                0,          0,          0
+                0,          1,          0
         };
-        int[] status2 = {
+        final int[] status2 = {
                 -1,        -1,          1,
                     -1,     1,      0,
                         0,  0,  0,
@@ -123,43 +123,259 @@ public class ControllerTest {
                 1,          0,          0
         };
         int[] mouse = new int[3];
-        int[] newStatus1, newStatus11;
-        int[] newStatus2, newStatus22;
+        int[] newStatusA, newStatusB;
 
         for(int i=0;i<9;i++) model.pawnPlaced();
 
         for(int i=0;i<24;i++)
         {
-            newStatus1 = status1.clone();
-            model.setStatus(newStatus1);
-            controller.unselect(i, newStatus1, tab, mouse);
+            newStatusA = status1.clone();
+            model.setStatus(newStatusA);
+            controller.unselect(i, newStatusA, tab, mouse);
             for(int j=0;j<24;j++)
             {
-                newStatus11 = newStatus1.clone();
-                model.setStatus(newStatus11);
-                controller.select(j,newStatus11,tab,mouse);
-                if(i == 0 && j == 9)        assertArrayEquals(new int[] {0,1,1,0,0,0,0,-1,0,1,0,0,-1,0,1,0,0,0,-1,-1,0,0,0,0}, newStatus11);
-                else if(i == 1 && j == 4)   assertArrayEquals(new int[] {1,0,1,0,1,0,0,-1,0,0,0,0,-1,0,1,0,0,0,-1,-1,0,0,0,0}, newStatus11);
-                else if(i == 14 && j == 13) assertArrayEquals(new int[] {1,1,1,0,0,0,0,-1,0,0,0,0,-1,1,0,0,0,0,-1,-1,0,0,0,0}, newStatus11);
-                else if(i == 14 && j == 23) assertArrayEquals(new int[] {1,1,1,0,0,0,0,-1,0,0,0,0,-1,0,0,0,0,0,-1,-1,0,0,0,1}, newStatus11);
-                else if(i == 0 && j == 0) assertArrayEquals(status1, newStatus11);
-                else if(i == 1 && j == 1) assertArrayEquals(status1, newStatus11);
-                else if(i == 2 && j == 2) assertArrayEquals(status1, newStatus11);
-                else if(i == 14 && j == 14) assertArrayEquals(status1, newStatus11);
-                else assertArrayEquals(newStatus1, newStatus11);
-
+                controller.message = "";
+                newStatusB = newStatusA.clone();
+                model.setStatus(newStatusB);
+                controller.select(j,newStatusB,tab,mouse);
+                if(i == 0 && j == 9)
+                {
+                    assertArrayEquals(new int[] {0,1,1,0,0,0,0,-1,0,1,0,0,-1,0,1,0,0,0,-1,-1,0,0,1,0}, newStatusB);
+                    controller.checkEnemy(j);
+                    assertEquals(true, controller.message.endsWith("yes"));
+                }
+                else if(i == 1 && j == 4)
+                {
+                    assertArrayEquals(new int[] {1,0,1,0,1,0,0,-1,0,0,0,0,-1,0,1,0,0,0,-1,-1,0,0,1,0}, newStatusB);
+                    controller.checkEnemy(j);
+                    assertEquals(true, controller.message.endsWith("yes"));
+                }
+                else if(i == 14 && j == 13)
+                {
+                    assertArrayEquals(new int[] {1,1,1,0,0,0,0,-1,0,0,0,0,-1,1,0,0,0,0,-1,-1,0,0,1,0}, newStatusB);
+                    controller.checkEnemy(j);
+                    assertEquals(true, controller.message.endsWith("yes"));
+                }
+                else if(i == 14 && j == 23)
+                {
+                    assertArrayEquals(new int[] {1,1,1,0,0,0,0,-1,0,0,0,0,-1,0,0,0,0,0,-1,-1,0,0,1,1}, newStatusB);
+                    controller.checkEnemy(j);
+                    assertEquals(true, controller.message.endsWith("yes"));
+                }
+                else if(i == 22 && j == 21)
+                {
+                    assertArrayEquals(new int[] {1,1,1,0,0,0,0,-1,0,0,0,0,-1,0,1,0,0,0,-1,-1,0,1,0,0}, newStatusB);
+                    controller.checkEnemy(j);
+                    assertEquals(true, controller.message.endsWith("yes"));
+                }
+                else if(i == 22 && j == 23)
+                {
+                    assertArrayEquals(new int[] {1,1,1,0,0,0,0,-1,0,0,0,0,-1,0,1,0,0,0,-1,-1,0,0,0,1}, newStatusB);
+                    controller.checkEnemy(j);
+                    assertEquals(true, controller.message.endsWith("no"));
+                }
+                else if(i == 0 && j == 0)
+                {
+                    assertArrayEquals(status1, newStatusB);
+                    assertEquals("", controller.message);
+                }
+                else if(i == 1 && j == 1)
+                {
+                    assertArrayEquals(status1, newStatusB);
+                    assertEquals("", controller.message);
+                }
+                else if(i == 2 && j == 2)
+                {
+                    assertArrayEquals(status1, newStatusB);
+                    assertEquals("", controller.message);
+                }
+                else if(i == 14 && j == 14)
+                {
+                    assertArrayEquals(status1, newStatusB);
+                    assertEquals("", controller.message);
+                }
+                else if(i == 22 && j == 22)
+                {
+                    assertArrayEquals(status1, newStatusB);
+                    assertEquals("", controller.message);
+                }
+                else
+                {
+                    assertArrayEquals(newStatusA, newStatusB);
+                    assertEquals("", controller.message);
+                }
             }
         }
 
-
-
+        for(int i=0;i<24;i++)
+        {
+            newStatusA = status2.clone();
+            model.setStatus(newStatusA);
+            controller.unselect(i, newStatusA, tab, mouse);
+            for(int j=0;j<24;j++)
+            {
+                controller.message = "";
+                newStatusB = newStatusA.clone();
+                model.setStatus(newStatusB);
+                controller.select(j,newStatusB,tab,mouse);
+                if(i == 2 && j == 14)
+                {
+                    assertArrayEquals(new int[] {-1,-1,0,-1,1,0,0,0,0,-1,1,0,0,0,1,0,0,0,0,0,0,1,0,0}, newStatusB);
+                    controller.checkEnemy(j);
+                    assertEquals(true, controller.message.endsWith("yes"));
+                }
+                else if(i == 4 && j == 5)
+                {
+                    assertArrayEquals(new int[] {-1,-1,1,-1,0,1,0,0,0,-1,1,0,0,0,0,0,0,0,0,0,0,1,0,0}, newStatusB);
+                    controller.checkEnemy(j);
+                    assertEquals(true, controller.message.endsWith("yes"));
+                }
+                else if(i == 4 && j == 7)
+                {
+                    assertArrayEquals(new int[] {-1,-1,1,-1,0,0,0,1,0,-1,1,0,0,0,0,0,0,0,0,0,0,1,0,0}, newStatusB);
+                    controller.checkEnemy(j);
+                    assertEquals(true, controller.message.endsWith("yes"));
+                }
+                else if(i == 10 && j == 11)
+                {
+                    assertArrayEquals(new int[] {-1,-1,1,-1,1,0,0,0,0,-1,0,1,0,0,0,0,0,0,0,0,0,1,0,0}, newStatusB);
+                    controller.checkEnemy(j);
+                    assertEquals(true, controller.message.endsWith("yes"));
+                }
+                else if(i == 10 && j == 18)
+                {
+                    assertArrayEquals(new int[] {-1,-1,1,-1,1,0,0,0,0,-1,0,0,0,0,0,0,0,0,1,0,0,1,0,0}, newStatusB);
+                    controller.checkEnemy(j);
+                    assertEquals(true, controller.message.endsWith("yes"));
+                }
+                else if(i == 21 && j == 22)
+                {
+                    assertArrayEquals(new int[] {-1,-1,1,-1,1,0,0,0,0,-1,1,0,0,0,0,0,0,0,0,0,0,0,1,0}, newStatusB);
+                    controller.checkEnemy(j);
+                    assertEquals(true, controller.message.endsWith("yes"));
+                }
+                else if(i == 2 && j == 2)
+                {
+                    assertArrayEquals(status2, newStatusB);
+                    assertEquals("", controller.message);
+                }
+                else if(i == 4 && j == 4)
+                {
+                    assertArrayEquals(status2, newStatusB);
+                    assertEquals("", controller.message);
+                }
+                else if(i == 10 && j == 10)
+                {
+                    assertArrayEquals(status2, newStatusB);
+                    assertEquals("", controller.message);
+                }
+                else if(i == 21 && j == 21)
+                {
+                    assertArrayEquals(status2, newStatusB);
+                    assertEquals("", controller.message);
+                }
+                else
+                {
+                    assertArrayEquals(newStatusA, newStatusB);
+                    assertEquals("", controller.message);
+                }
+            }
+        }
     }
 
-    public void testToNine() throws Exception {
+    @Test
+    public void testToNine() {
+        final int[] status1 = {
+                1,          1,          1,
+                    0,      0,      0,
+                        0, -1,  0,
+                0,  0,  0,     -1,  0,  1,
+                        0,  0,  0,
+                    -1,     -1,      0,
+                0,          0,          0
+        };
+        final int[] status2 = {
+                -1,        -1,          1,
+                    -1,     1,      0,
+                        0,  0,  0,
+                -1, 1,  0,      0,  0,  0,
+                        0,  0,  0,
+                    0,      0,      0,
+                1,          0,          0
+        };
 
+        for(int i=0;i<24;i++)
+        {
+            controller.message = "";
+            model.reset();
+            for(int q=0;q<5;q++) model.pawnPlaced();
+            model.setStatus(status1.clone());
+            controller.toNine(i,model.getStatus());
+            if(i == 23) assertEquals(true, controller.message.endsWith("no"));
+            else
+            {
+                if(status1[i] == 0 )
+                {
+                    assertEquals(1,model.getStatus()[i]);
+                    assertEquals(true, controller.message.endsWith("yes"));
+                }
+                else
+                {
+                    assertEquals(status1[i],model.getStatus()[i]);
+                    assertEquals("", controller.message);
+                }
+            }
+        }
+
+        for(int i=0;i<24;i++)
+        {
+            controller.message = "";
+            model.reset();
+            for(int q=0;q<5;q++) model.pawnPlaced();
+            model.setStatus(status2.clone());
+            controller.toNine(i,model.getStatus());
+            if(status2[i] == 0 )
+            {
+                assertEquals(1,model.getStatus()[i]);
+                assertEquals(true, controller.message.endsWith("yes"));
+            }
+            else
+            {
+                assertEquals(status2[i],model.getStatus()[i]);
+                assertEquals("", controller.message);
+            }
+        }
     }
 
-    public void testCheckEnemy() throws Exception {
+    public void testCheckEnemy() {
+        final int[] status1 = {
+                1,          1,          1,
+                    0,      0,      0,
+                        0, -1,  0,
+                0,  0,  0,     -1,  0,  0,
+                        0,  0,  0,
+                    -1,     -1,      0,
+                0,          0,          0
+        };
+        final int[] status2 = {
+                -1,        -1,          1,
+                    -1,     1,      0,
+                        0,  0,  0,
+                -1, 1,  0,      0,  0,  0,
+                        0,  0,  0,
+                    0,      0,      0,
+                1,          0,          0
+        };
+
+        for(int i=0;i<24;i++)
+        {
+            controller.message = "";
+            model.setStatus(status1.clone());
+            controller.checkEnemy(i);
+            assertEquals("",controller.message);
+        }
+
+
     }
 
     public void testCapture() throws Exception {

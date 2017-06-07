@@ -6,7 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed92def3-39fa-4aae-b3a0-7076783bc46e" name="Default" comment="" />
+    <list default="true" id="ed92def3-39fa-4aae-b3a0-7076783bc46e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Mill/Mill/ControllerTest.class" afterPath="$PROJECT_DIR$/out/production/Mill/Mill/ControllerTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mill/ControllerTest.java" afterPath="$PROJECT_DIR$/src/Mill/ControllerTest.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,10 +31,11 @@
       <file leaf-file-name="View.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Mill/View.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+            <state relative-caret-position="4116">
+              <caret line="222" column="7" lean-forward="false" selection-start-line="222" selection-start-column="7" selection-end-line="222" selection-end-column="7" />
               <folding>
                 <element signature="e#6674#6675#0" expanded="true" />
+                <element signature="e#6721#6722#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -39,13 +44,11 @@
       <file leaf-file-name="Model.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Mill/Model.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2940">
-              <caret line="164" column="0" lean-forward="false" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
+            <state relative-caret-position="2718">
+              <caret line="192" column="19" lean-forward="false" selection-start-line="192" selection-start-column="8" selection-end-line="192" selection-end-column="19" />
               <folding>
-                <element signature="e#1415#1416#0" expanded="true" />
-                <element signature="e#1448#1449#0" expanded="true" />
-                <element signature="e#3679#3680#0" expanded="true" />
-                <element signature="e#3715#3716#0" expanded="true" />
+                <element signature="e#3800#3801#0" expanded="true" />
+                <element signature="e#3826#3827#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,12 +57,14 @@
       <file leaf-file-name="ModelTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Mill/ModelTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="504">
+              <caret line="76" column="31" lean-forward="false" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#218#219#0" expanded="true" />
-                <element signature="e#253#254#0" expanded="true" />
+                <element signature="method#testGetStatusSerialized#0;class#ModelTest#0" expanded="false" />
+                <element signature="method#testDeserializeStatus#0;class#ModelTest#0" expanded="false" />
+                <element signature="method#testCheckMill#0;class#ModelTest#0" expanded="false" />
+                <element signature="method#testCheckIfEnemyCanMove#0;class#ModelTest#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -68,30 +73,36 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Mill/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6384">
-              <caret line="311" column="33" lean-forward="false" selection-start-line="311" selection-start-column="33" selection-end-line="311" selection-end-column="33" />
+            <state relative-caret-position="324">
+              <caret line="277" column="22" lean-forward="false" selection-start-line="277" selection-start-column="22" selection-end-line="277" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControllerTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ControllerTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Mill/ControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+            <state relative-caret-position="452">
+              <caret line="364" column="34" lean-forward="true" selection-start-line="364" selection-start-column="34" selection-end-line="364" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="class#MockView#0;class#ControllerTest#0" expanded="false" />
+                <element signature="class#MockController#0;class#ControllerTest#0" expanded="false" />
+                <element signature="method#setUp#0;class#ControllerTest#0" expanded="false" />
+                <element signature="method#testUnselect#0;class#ControllerTest#0" expanded="false" />
+                <element signature="method#testSelect#0;class#ControllerTest#0" expanded="false" />
+                <element signature="method#testToNine#0;class#ControllerTest#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MVC.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MVC.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Mill/MVC.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="273">
-              <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+              <caret line="13" column="34" lean-forward="false" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -109,7 +120,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -132,9 +143,9 @@
         <option value="$PROJECT_DIR$/src/Mill/View.java" />
         <option value="$PROJECT_DIR$/src/Mill/ViewTest.groovy" />
         <option value="$PROJECT_DIR$/src/Mill/ViewTest.java" />
-        <option value="$PROJECT_DIR$/src/Mill/MVC.java" />
         <option value="$PROJECT_DIR$/src/Mill/Model.java" />
         <option value="$PROJECT_DIR$/src/Mill/ModelTest.java" />
+        <option value="$PROJECT_DIR$/src/Mill/MVC.java" />
         <option value="$PROJECT_DIR$/src/Mill/Controller.java" />
         <option value="$PROJECT_DIR$/src/Mill/ControllerTest.java" />
       </list>
@@ -198,59 +209,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MVC">
-    <configuration default="false" name="ModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Mill.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Mill" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Mill" />
-      <option name="MAIN_CLASS_NAME" value="Mill.ModelTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="ControllerTest.testUnselect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Mill.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Mill" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Mill" />
-      <option name="MAIN_CLASS_NAME" value="Mill.ControllerTest" />
-      <option name="METHOD_NAME" value="testUnselect" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.ControllerTest.testToNine">
     <configuration default="false" name="ControllerTest.testSelect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -321,6 +280,58 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="Mill" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ControllerTest.testToNine" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Mill.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Mill" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Mill" />
+      <option name="MAIN_CLASS_NAME" value="Mill.ControllerTest" />
+      <option name="METHOD_NAME" value="testToNine" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Mill.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Mill" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Mill" />
+      <option name="MAIN_CLASS_NAME" value="Mill.ModelTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -528,19 +539,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.ModelTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ControllerTest.testUnselect" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ControllerTest.testSelect" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ControllerTest" />
-      <item index="4" class="java.lang.String" itemvalue="Application.MVC" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ControllerTest.testSelect" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ControllerTest" />
+      <item index="2" class="java.lang.String" itemvalue="Application.MVC" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ControllerTest.testToNine" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ModelTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.MVC" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ControllerTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ControllerTest.testSelect" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ControllerTest.testUnselect" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ModelTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ControllerTest.testToNine" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ModelTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ControllerTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ControllerTest.testSelect" />
+        <item index="4" class="java.lang.String" itemvalue="Application.MVC" />
       </list>
     </recent_temporary>
   </component>
@@ -558,35 +569,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ControllerTest - 2017.06.05 at 04h 27m 01s.xml">
-      <configuration name="ControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ControllerTest_testSelect - 2017.06.05 at 04h 09m 08s.xml">
+    <history-entry file="ControllerTest_testSelect - 2017.06.05 at 06h 58m 21s.xml">
       <configuration name="ControllerTest.testSelect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ControllerTest_testSelect - 2017.06.05 at 04h 09m 34s.xml">
+    <history-entry file="ControllerTest_testSelect - 2017.06.05 at 06h 58m 50s.xml">
       <configuration name="ControllerTest.testSelect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ControllerTest_testSelect - 2017.06.05 at 04h 12m 23s.xml">
+    <history-entry file="ControllerTest_testSelect - 2017.06.05 at 06h 59m 35s.xml">
       <configuration name="ControllerTest.testSelect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ControllerTest_testSelect - 2017.06.05 at 04h 13m 20s.xml">
-      <configuration name="ControllerTest.testSelect" configurationId="JUnit" />
+    <history-entry file="ControllerTest_testToNine - 2017.06.05 at 06h 38m 08s.xml">
+      <configuration name="ControllerTest.testToNine" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ControllerTest_testSelect - 2017.06.05 at 04h 14m 06s.xml">
-      <configuration name="ControllerTest.testSelect" configurationId="JUnit" />
+    <history-entry file="ControllerTest_testToNine - 2017.06.05 at 07h 01m 43s.xml">
+      <configuration name="ControllerTest.testToNine" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ControllerTest_testSelect - 2017.06.05 at 04h 15m 22s.xml">
-      <configuration name="ControllerTest.testSelect" configurationId="JUnit" />
+    <history-entry file="ControllerTest_testToNine - 2017.06.05 at 17h 39m 18s.xml">
+      <configuration name="ControllerTest.testToNine" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ControllerTest_testSelect - 2017.06.05 at 04h 19m 56s.xml">
-      <configuration name="ControllerTest.testSelect" configurationId="JUnit" />
+    <history-entry file="ControllerTest_testToNine - 2017.06.05 at 17h 55m 54s.xml">
+      <configuration name="ControllerTest.testToNine" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ControllerTest_testSelect - 2017.06.05 at 04h 20m 06s.xml">
-      <configuration name="ControllerTest.testSelect" configurationId="JUnit" />
+    <history-entry file="ControllerTest_testToNine - 2017.06.05 at 17h 58m 15s.xml">
+      <configuration name="ControllerTest.testToNine" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ControllerTest_testSelect - 2017.06.05 at 04h 21m 59s.xml">
-      <configuration name="ControllerTest.testSelect" configurationId="JUnit" />
+    <history-entry file="ControllerTest_testToNine - 2017.06.05 at 18h 00m 54s.xml">
+      <configuration name="ControllerTest.testToNine" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ModelTest - 2017.06.05 at 17h 50m 56s.xml">
+      <configuration name="ModelTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -599,7 +610,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -611,7 +622,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5190275" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5190275" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -669,7 +680,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="54" />
+      <option name="time" value="56" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -795,30 +806,10 @@
     <entry file="file://$PROJECT_DIR$/src/Mill/123.groovy" />
     <entry file="file://$PROJECT_DIR$/src/Mill/ViewTest.groovy" />
     <entry file="file://$PROJECT_DIR$/src/Mill/ViewTest.java" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/Assert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="321" column="0" lean-forward="false" selection-start-line="321" selection-start-column="0" selection-end-line="321" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="35">
           <caret line="202" column="0" lean-forward="false" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Mill/Model.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2940">
-          <caret line="164" column="0" lean-forward="false" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
-          <folding>
-            <element signature="e#1415#1416#0" expanded="true" />
-            <element signature="e#1448#1449#0" expanded="true" />
-            <element signature="e#3679#3680#0" expanded="true" />
-            <element signature="e#3715#3716#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -836,42 +827,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Mill/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6384">
-          <caret line="311" column="33" lean-forward="false" selection-start-line="311" selection-start-column="33" selection-end-line="311" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Mill/ModelTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#218#219#0" expanded="true" />
-            <element signature="e#253#254#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Mill/ControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Mill/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+        <state relative-caret-position="4116">
+          <caret line="222" column="7" lean-forward="false" selection-start-line="222" selection-start-column="7" selection-end-line="222" selection-end-column="7" />
           <folding>
             <element signature="e#6674#6675#0" expanded="true" />
+            <element signature="e#6721#6722#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -879,8 +841,65 @@
     <entry file="file://$PROJECT_DIR$/src/Mill/MVC.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
-          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+          <caret line="13" column="34" lean-forward="false" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="321" column="0" lean-forward="false" selection-start-line="321" selection-start-column="0" selection-end-line="321" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mill/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2718">
+          <caret line="192" column="19" lean-forward="false" selection-start-line="192" selection-start-column="8" selection-end-line="192" selection-end-column="19" />
+          <folding>
+            <element signature="e#3800#3801#0" expanded="true" />
+            <element signature="e#3826#3827#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mill/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="277" column="22" lean-forward="false" selection-start-line="277" selection-start-column="22" selection-end-line="277" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mill/ModelTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="76" column="31" lean-forward="false" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#testGetStatusSerialized#0;class#ModelTest#0" expanded="false" />
+            <element signature="method#testDeserializeStatus#0;class#ModelTest#0" expanded="false" />
+            <element signature="method#testCheckMill#0;class#ModelTest#0" expanded="false" />
+            <element signature="method#testCheckIfEnemyCanMove#0;class#ModelTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mill/ControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="364" column="34" lean-forward="true" selection-start-line="364" selection-start-column="34" selection-end-line="364" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#MockView#0;class#ControllerTest#0" expanded="false" />
+            <element signature="class#MockController#0;class#ControllerTest#0" expanded="false" />
+            <element signature="method#setUp#0;class#ControllerTest#0" expanded="false" />
+            <element signature="method#testUnselect#0;class#ControllerTest#0" expanded="false" />
+            <element signature="method#testSelect#0;class#ControllerTest#0" expanded="false" />
+            <element signature="method#testToNine#0;class#ControllerTest#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
