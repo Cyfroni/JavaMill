@@ -53,10 +53,6 @@ class View extends JFrame {
                 if (status[i] == 0) continue;
 
                 Graphics2D g2d = (Graphics2D) g;
-                /*g2d.setColor(Color.BLACK);
-                Ellipse2D.Float ring = new Ellipse2D.Float(tab[i][0]-21, tab[i][1]-21, 42, 42);
-                g2d.fill(ring);
-                g2d.draw(ring);*/
                 Ellipse2D.Float circle = new Ellipse2D.Float(tab[i][0]-20, tab[i][1]-20, 40, 40);
                 if (status[i] == 1) g2d.setColor(Color.GREEN);                              //green Pawn
                 else if (status[i] == -1) g2d.setColor(Color.RED);                          //red Pawn
@@ -74,8 +70,8 @@ class View extends JFrame {
     //======================================================= constructor
     /**
      * Constructor
-     * @param model - our model
-     * @throws IOException - cant reach image
+     * @param model our model
+     * @throws IOException cant find image
      */
     View(Model model) throws IOException{
         //... Set up the logic
@@ -139,7 +135,7 @@ class View extends JFrame {
         this.add(content);
 
         this.setTitle("Nine Men's Morris");
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
     /**
@@ -159,7 +155,7 @@ class View extends JFrame {
 
     /**
      * change bar from menu to option or vice versa
-     * @param toOption - change to option if true, change to menu if false
+     * @param toOption change to option if true, change to menu if false
      */
     void ChangeBar(boolean toOption)
     {
@@ -181,7 +177,6 @@ class View extends JFrame {
         revalidate();
     }
 
-
     void addSGBListener(ActionListener sgbl) {
         m_StartGameButton.addActionListener(sgbl);
     }
@@ -200,7 +195,7 @@ class View extends JFrame {
 
     /**
      * Get ip from textfield
-     * @return - user input
+     * @return user input
      */
     String getIp()
     {
@@ -209,21 +204,27 @@ class View extends JFrame {
 
     /**
      * Get port from textbox
-     * @return - user input
+     * @return user input
      */
     int getPort()
     {
         return Integer.parseInt(m_PortField.getText());
     }
 
-
     /**
      * Update view and show ending message
-     * @param win - true if won, false if lost
+     * @param win true if won, false if lost
      */
     void endGame(boolean win) {
         update();
         JOptionPane.showMessageDialog(this, win ? "Wygrałeś" : "Przegrałeś");
+    }
+
+    /**
+     * Update view and show ending message
+     */
+    void resetConnection() {
+        JOptionPane.showMessageDialog(this, "Przeciwnik się rozłączył");
     }
 }
 

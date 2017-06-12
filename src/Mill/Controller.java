@@ -7,7 +7,7 @@ import java.net.Socket;
 
 import static java.lang.Thread.sleep;
 
-public class Controller{
+class Controller{
     //... The Controller needs to interact with both the Model and View.
     private Model m_model;
     private View  m_view;
@@ -80,8 +80,7 @@ public class Controller{
      */
     void sendMessage(String endTurn) {
         String message = m_model.getStatusSerialized();
-        if (endTurn.equals("no"));     //still my turn
-        else if (endTurn.equals("yes")) //end of my turn
+        if (endTurn.equals("yes")) //end of my turn
         {
             m_model.setYourTurn(false);
         }
@@ -92,7 +91,6 @@ public class Controller{
             out.println(message + endTurn);
             return;
         }
-        else if (endTurn.equals("reset"));
 
 
         m_view.update();
@@ -107,17 +105,17 @@ public class Controller{
      *   3. "endG" - Game over, you lost
      *   4. "reset" - reset game
      */
-    void receiveMessage() {
+    private void receiveMessage() throws Exception{
         if (inputLine.endsWith("no")) //still enemy turn
         {
             inputLine = inputLine.replace("no","");
         }
-        if (inputLine.endsWith("yes")) //your turn now
+        else if (inputLine.endsWith("yes")) //your turn now
         {
             inputLine = inputLine.replace("yes","");
             m_model.setYourTurn(true);
         }
-        if (inputLine.endsWith("endG")) //game over
+        else if (inputLine.endsWith("endG")) //game over
         {
             inputLine = inputLine.replace("endG","");
             m_model.deserializeStatus(inputLine);
@@ -125,12 +123,13 @@ public class Controller{
             m_view.endGame(false);
             return;
         }
-        if (inputLine.endsWith("reset")) //reset game
+        else if (inputLine.endsWith("reset")) //reset game
         {
             m_model.reset();
             m_view.update();
             return;
         }
+        else throw new Exception("Unknown message");
         //System.out.println(inputLine);
         m_model.deserializeStatus(inputLine);
         m_view.update();
@@ -254,12 +253,17 @@ public class Controller{
         }
     }
 
-    void startGame() throws IOException{
-        while(true)
-        {
-            inputLine = in.readLine();
-            receiveMessage();
-        }
+    void startGame() throws Exception{
+            while (true) {
+                try {
+                    inputLine = in.readLine();
+                }catch (IOException e)
+                {
+                    m_view.resetConnection();
+                    System.exit(0);
+                }
+                receiveMessage();
+            }
     }
 
     void unselect(int i, int[] status, int[][] tab, int[] mouse) {
@@ -338,7 +342,7 @@ public class Controller{
             m_view.update();
             sendMessage("endG");
         }
-        sendMessage("yes");
+        else sendMessage("yes");
         return true;
     }
 }

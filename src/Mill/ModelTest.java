@@ -77,11 +77,11 @@ public class ModelTest  {
     public void testCheckMill(){
         int[] status = {
                 1,          1,          1,
-                0,      0,      0,
-                1,  0,  0,
+                    0,      0,      0,
+                        1,  0,  0,
                 -1, 0,  0,      0,  0,  0,
-                0,  1,  0,
-                0,     -1,      0,
+                        0,  1,  0,
+                    0,     -1,      0,
                 -1,        -1,         -1
         };
         ArrayList<Integer> expectedToBeTrue = new ArrayList<>();
@@ -90,11 +90,11 @@ public class ModelTest  {
         expectedToBeTrue.add(2);
         int[] status2 = {
                 1,          1,          0,
-                0,      0,      0,
-                1,  0,  0,
+                    0,      0,      0,
+                        1,  0,  0,
                 -1, 0,  0,      0,  0,  0,
-                0,  1,  0,
-                0,     -1,      0,
+                        0,  1,  0,
+                    0,     -1,      0,
                 -1,        -1,         -1
         };
 

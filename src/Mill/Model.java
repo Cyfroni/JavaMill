@@ -51,7 +51,7 @@ class Model
 
     /**
      * connection getter
-     * @return - Model.connection
+     * @return Model.connection
      */
     boolean isConnection() {
         return connection;
@@ -59,7 +59,7 @@ class Model
 
     /**
      * connection setter
-     * @param connection - new value
+     * @param connection new value
      */
     void setConnection(boolean connection) {
         this.connection = connection;
@@ -67,7 +67,7 @@ class Model
 
     /**
      * Game stage checker
-     * @return - if player places less than 9 Pawns return true, else false
+     * @return if player places less than 9 Pawns return true, else false
      */
     boolean isToNine() {
         return !(toNine >= 9);
@@ -82,7 +82,7 @@ class Model
 
     /**
      * yourTurn getter
-     * @return - Model.yourTurn
+     * @return Model.yourTurn
      */
     boolean isYourTurn() {
         return yourTurn;
@@ -90,7 +90,7 @@ class Model
 
     /**
      * yourTurn setter
-     * @param yourTurn - new value
+     * @param yourTurn new value
      */
     void setYourTurn(boolean yourTurn) {
         this.yourTurn = yourTurn;
@@ -98,7 +98,7 @@ class Model
 
     /**
      * selected getter
-     * @return - Model.selected
+     * @return Model.selected
      */
     boolean isSelected() {
         return selected;
@@ -106,7 +106,7 @@ class Model
 
     /**
      * selected setter
-     * @param selected - new value
+     * @param selected new value
      */
     void setSelected(boolean selected) {
         this.selected = selected;
@@ -114,7 +114,7 @@ class Model
 
     /**
      * capturing getter
-     * @return - Model.capturing
+     * @return Model.capturing
      */
     boolean isCapturing() {
         return capturing;
@@ -122,7 +122,7 @@ class Model
 
     /**
      * capturing setter
-     * @param capturing - new value
+     * @param capturing new value
      */
     void setCapturing(boolean capturing) {
         this.capturing = capturing;
@@ -130,7 +130,7 @@ class Model
 
     /**
      * game getter
-     * @return - Model.game
+     * @return Model.game
      */
     boolean isGame() {
         return game;
@@ -145,7 +145,7 @@ class Model
 
     /**
      * Calculate enemy pawns
-     * @return - number of enemy pawns
+     * @return number of enemy pawns
      */
     int getEnemyPawns() {
         int sum = 0;
@@ -156,7 +156,7 @@ class Model
 
     /**
      * Calculate ally pawns
-     * @return - number of ally pawns
+     * @return number of ally pawns
      */
     int getMyPawns() {
         int sum = 0;
@@ -167,7 +167,7 @@ class Model
 
     /**
      * mouse getter
-     * @return - Model.mouse
+     * @return Model.mouse
      */
     int[] getMouse() {
         return mouse;
@@ -175,19 +175,23 @@ class Model
 
     /**
      * status getter
-     * @return - Model.status
+     * @return Model.status
      */
     int[] getStatus() {
         return status;
     }
 
-    public void setStatus(int[] status) {
+    /**
+     * status setter
+     * @param status new value
+     */
+    void setStatus(int[] status) {
         this.status = status;
     }
 
     /**
      * tab getter
-     * @return - Model.tab
+     * @return Model.tab
      */
     int[][] getTab() {
         return tab;
@@ -222,22 +226,22 @@ class Model
 
     /**
      * Serialize status to string
-     * @return - serialized status
+     * @return serialized status
      */
     String getStatusSerialized(){
 
-        String message = new String();
+        StringBuilder message = new StringBuilder();
 
         for(int i=0;i<24;i++)
         {
-            message += Integer.toString((-1) * status[i]);
+            message.append((-1) * status[i]);
         }
-        return message;
+        return message.toString();
     }
 
     /**
      * Deserialize status and overwrite its own
-     * @param message - status to deserialize
+     * @param message status to deserialize
      */
     void deserializeStatus(String message){
 
@@ -261,8 +265,8 @@ class Model
 
     /**
      * Check if pawn is in mill
-     * @param n - pawn's position in status
-     * @return - if the pawn is in mill - true, else false
+     * @param n pawn's position in status
+     * @return if the pawn is in mill - true, else false
      */
     boolean checkMill(int n) {
         int counter = 0;
@@ -288,7 +292,7 @@ class Model
 
     /**
      * Check if enemy can move
-     * @return - if enemy can move return true, else false
+     * @return if enemy can move return true, else false
      */
     boolean checkIfEnemyCanMove() {
         if (isToNine() || getEnemyPawns() == 3) return true;
