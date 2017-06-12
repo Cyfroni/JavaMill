@@ -6,28 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed92def3-39fa-4aae-b3a0-7076783bc46e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mill.jar" afterPath="$PROJECT_DIR$/Mill.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Mill/Mill/Controller$CBListener.class" afterPath="$PROJECT_DIR$/out/production/Mill/Mill/Controller$CBListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Mill/Mill/Controller$EBListener.class" afterPath="$PROJECT_DIR$/out/production/Mill/Mill/Controller$EBListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Mill/Mill/Controller$PlayAreaListener.class" afterPath="$PROJECT_DIR$/out/production/Mill/Mill/Controller$PlayAreaListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Mill/Mill/Controller$SBListener.class" afterPath="$PROJECT_DIR$/out/production/Mill/Mill/Controller$SBListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Mill/Mill/Controller$SGBListener.class" afterPath="$PROJECT_DIR$/out/production/Mill/Mill/Controller$SGBListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Mill/Mill/Controller.class" afterPath="$PROJECT_DIR$/out/production/Mill/Mill/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Mill/Mill/ControllerTest$MockController.class" afterPath="$PROJECT_DIR$/out/production/Mill/Mill/ControllerTest$MockController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Mill/Mill/ControllerTest$MockView.class" afterPath="$PROJECT_DIR$/out/production/Mill/Mill/ControllerTest$MockView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Mill/Mill/ControllerTest.class" afterPath="$PROJECT_DIR$/out/production/Mill/Mill/ControllerTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Mill/Mill/Model.class" afterPath="$PROJECT_DIR$/out/production/Mill/Mill/Model.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Mill/Mill/View$1.class" afterPath="$PROJECT_DIR$/out/production/Mill/Mill/View$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Mill/Mill/View$2.class" afterPath="$PROJECT_DIR$/out/production/Mill/Mill/View$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Mill/Mill/View.class" afterPath="$PROJECT_DIR$/out/production/Mill/Mill/View.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mill/Controller.java" afterPath="$PROJECT_DIR$/src/Mill/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mill/ControllerTest.java" afterPath="$PROJECT_DIR$/src/Mill/ControllerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mill/Model.java" afterPath="$PROJECT_DIR$/src/Mill/Model.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mill/ModelTest.java" afterPath="$PROJECT_DIR$/src/Mill/ModelTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mill/View.java" afterPath="$PROJECT_DIR$/src/Mill/View.java" />
-    </list>
+    <list default="true" id="ed92def3-39fa-4aae-b3a0-7076783bc46e" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -629,7 +608,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
